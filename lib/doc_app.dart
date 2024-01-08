@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
         ),
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.getProductScren,
+        initialRoute: Routes.signUpScreen,
         onGenerateRoute: appRouter.generateRoute,
       )
     );

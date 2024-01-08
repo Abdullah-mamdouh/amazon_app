@@ -1,3 +1,5 @@
+import 'package:amazon_app/features/auth/logic/sign-up_cubit/sign_up_cubit.dart';
+import 'package:amazon_app/features/auth/ui/sign_up_page.dart';
 import 'package:amazon_app/features/get_products/logic/cubit.dart';
 import 'package:amazon_app/features/get_products/ui/products_screen.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +16,13 @@ class AppRouter {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(
           builder: (_) => Container(color: Colors.red,),
+        );
+      case Routes.signUpScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<SignUpCubit>(),
+            child: const SignUpPage(),
+          ),
         );
       case Routes.getProductScren:
         return MaterialPageRoute(
